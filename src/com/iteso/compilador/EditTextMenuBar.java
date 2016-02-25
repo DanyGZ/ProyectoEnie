@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
+import java.util.Scanner;
 
 /**
  * Created by Daniel on 24/02/2016.
@@ -65,13 +67,32 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == save){
-            editor.onSaveFile();
+            JFileChooser file = new JFileChooser();
+            int option = file.showOpenDialog(this);
+            if(option == JFileChooser.APPROVE_OPTION){
+                try {
+                    BufferedWriter out = new BufferedWriter(new FileWriter(file.getSelectedFile().getPath()));
+                    editor.onSaveFile(out);
+                    out.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
         }else if(e.getSource() == open){
-            editor.onOpenFile("");
+            JFileChooser file = new JFileChooser();
+            int option = file.showOpenDialog(this);
+            if(option == JFileChooser.APPROVE_OPTION){
+                try {
+                    Scanner scanner = new Scanner(new FileReader(file.getSelectedFile().getPath()));
+                    editor.onOpenFile(scanner);
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                }
+            }
         }else if(e.getSource() == close){
             editor.onCloseFile();
         }else if(e.getSource() == build){
-            editor.onBuildProject();;
+            editor.onBuildProject();
         }else if(e.getSource() == run){
             editor.onRunProject();
         }else if(e.getSource() == copy){
