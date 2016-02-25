@@ -43,6 +43,8 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         add(paste);
         add(cut);
 
+        System.out.print("");
+
         save.setLabel("Save");
         open.setLabel("Open");
         close.setLabel("Close");
