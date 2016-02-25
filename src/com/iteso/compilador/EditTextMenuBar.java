@@ -7,9 +7,6 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-/**
- * Created by Daniel on 24/02/2016.
- */
 public class EditTextMenuBar extends JMenuBar implements ActionListener{
     private Button save;
     private Button open;
