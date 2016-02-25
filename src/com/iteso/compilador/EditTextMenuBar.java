@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-public class EditTextMenuBar extends JMenuBar implements ActionListener{
+public class EditTextMenuBar extends JToolBar implements ActionListener{
     private Button save;
     private Button open;
     private Button build;
@@ -26,7 +26,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         paste = new Button();
         cut = new Button();
         this.editor = editor;
-
         init();
     }
 
@@ -39,6 +38,7 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         add(paste);
         add(cut);
 
+<<<<<<< HEAD
         save.setLabel("Save");
         open.setLabel("Open");
         build.setLabel("Build");
@@ -47,6 +47,8 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         paste.setLabel("Paste");
         cut.setLabel("Cut");
 
+=======
+>>>>>>> fb3fe707bdcff411c1f61c525339062abc8f540b
         save.addActionListener(this);
         open.addActionListener(this);
         build.addActionListener(this);
@@ -60,7 +62,7 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == save){
             JFileChooser file = new JFileChooser();
-            int option = file.showSaveDialog(this);
+            int option = file.showOpenDialog(this);
             if(option == JFileChooser.APPROVE_OPTION){
                 try {
                     BufferedWriter out = new BufferedWriter(new FileWriter(file.getSelectedFile().getPath()));

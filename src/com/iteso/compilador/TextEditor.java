@@ -6,24 +6,32 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-
+/**
+ * Created by Daniel on 24/02/2016.
+ */
 public class TextEditor extends JFrame implements OnButtonPressedListener{
     private JTextArea textArea;
     private EditTextMenuBar menuBar;
 
+<<<<<<< HEAD
     public TextEditor(){
         textArea = new JTextArea();
         menuBar  = new EditTextMenuBar(this);
+=======
+    public TextEditor(String text){
+        textArea = new JTextArea();
+        menuBar = new EditTextMenuBar(this);
+>>>>>>> fb3fe707bdcff411c1f61c525339062abc8f540b
         init();
     }
 
     private void init(){
         setBounds(200, 10, 1500, 1000);
-        setTitle("Ã‘ ~ ~ ");
+        setTitle("Ñ~~");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(textArea);
-        setJMenuBar(menuBar);
+        getContentPane().add(menuBar);
     }
 
     @Override
