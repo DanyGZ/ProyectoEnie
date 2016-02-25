@@ -1,6 +1,7 @@
 package com.iteso.compilador;
 
 import javax.swing.*;
+import javax.swing.text.DefaultEditorKit;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
@@ -10,22 +11,20 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- * Created by Daniel on 24/02/2016.
- */
+
 public class TextEditor extends JFrame implements OnButtonPressedListener{
     private TextArea textArea;
     private EditTextMenuBar menuBar;
 
     public TextEditor(String text){
         textArea = new TextArea(text, 0,0, TextArea.SCROLLBARS_VERTICAL_ONLY);
-        menuBar = new EditTextMenuBar(this);
+        menuBar  = new EditTextMenuBar(this);
         init();
     }
 
     private void init(){
         setBounds(200, 10, 1500, 1000);
-        setTitle("Ñ~~");
+        setTitle("Ã‘ ~ ~ ");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(textArea);
@@ -38,7 +37,7 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
         while(scanner.hasNext()){
             code += (scanner.nextLine() + "\n");
         }
-        textArea.setText(code);
+        textArea.append(code);
     }
 
     @Override
@@ -54,7 +53,12 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
 
     @Override
     public void onCutText() {
-        System.out.print("Cut");
+
+        ActionMap m = menuBar.getActionMap();
+        Action Cut = m.get(DefaultEditorKit.cutAction);
+        Action Copy = m.get(DefaultEditorKit.copyAction);
+        Action Paste = m.get(DefaultEditorKit.pasteAction);
+
     }
 
     @Override

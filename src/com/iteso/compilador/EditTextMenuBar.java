@@ -7,9 +7,6 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-/**
- * Created by Daniel on 24/02/2016.
- */
 public class EditTextMenuBar extends JMenuBar implements ActionListener{
     private Button save;
     private Button open;
@@ -52,7 +49,7 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         run.setLabel("Run");
         copy.setLabel("Copy");
         paste.setLabel("Paste");
-        cut.setLabel("cut");
+        cut.setLabel("Cut");
 
         save.addActionListener(this);
         open.addActionListener(this);
@@ -68,7 +65,7 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == save){
             JFileChooser file = new JFileChooser();
-            int option = file.showOpenDialog(this);
+            int option = file.showSaveDialog(this);
             if(option == JFileChooser.APPROVE_OPTION){
                 try {
                     BufferedWriter out = new BufferedWriter(new FileWriter(file.getSelectedFile().getPath()));
