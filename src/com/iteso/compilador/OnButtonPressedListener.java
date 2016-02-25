@@ -14,5 +14,5 @@ public interface OnButtonPressedListener {
     void onCopyText();
     void onPasteText();
     void onBuildProject();
-    void onRunProject();
+    void onSaveAsFile(BufferedWriter out) throws IOException;
 }

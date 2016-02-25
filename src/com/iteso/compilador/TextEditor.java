@@ -12,30 +12,26 @@ import java.util.Scanner;
 public class TextEditor extends JFrame implements OnButtonPressedListener{
     private JTextArea textArea;
     private EditTextMenuBar menuBar;
+    public boolean isChanged;
 
-<<<<<<< HEAD
     public TextEditor(){
         textArea = new JTextArea();
         menuBar  = new EditTextMenuBar(this);
-=======
-    public TextEditor(String text){
-        textArea = new JTextArea();
-        menuBar = new EditTextMenuBar(this);
->>>>>>> fb3fe707bdcff411c1f61c525339062abc8f540b
         init();
     }
 
     private void init(){
         setBounds(200, 10, 1500, 1000);
-        setTitle("Ñ~~");
+        setTitle("Ã‘~~");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(textArea);
-        getContentPane().add(menuBar);
+        setJMenuBar(menuBar);
     }
 
     @Override
     public void onOpenFile(Scanner scanner) {
+        textArea.setText("");
         String code = "";
         while(scanner.hasNext()){
             code += (scanner.nextLine() + "\n");
@@ -70,7 +66,10 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
     }
 
     @Override
-    public void onRunProject() {
-        System.out.print("Run");
+    public void onSaveAsFile(BufferedWriter out) throws IOException {
+        out.write(textArea.getText());
+        out.close();
     }
+
+
 }
