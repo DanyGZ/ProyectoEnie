@@ -8,7 +8,7 @@ import javax.swing.*;
 public class Main extends JFrame{
 
     public static void main(String args[]){
-        TextEditor textEditor = new TextEditor("");
+        TextEditor textEditor = new TextEditor();
         textEditor.setVisible(true);
     }
 }

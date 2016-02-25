@@ -9,7 +9,6 @@ import java.util.Scanner;
  */
 public interface OnButtonPressedListener {
     void onOpenFile(Scanner scanner);
-    void onCloseFile();
     void onSaveFile(BufferedWriter out) throws IOException;
     void onCutText();
     void onCopyText();

@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class EditTextMenuBar extends JMenuBar implements ActionListener{
     private Button save;
     private Button open;
-    private Button close;
     private Button build;
     private Button run;
     private Button copy;
@@ -21,7 +20,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
     public EditTextMenuBar(TextEditor editor){
         save = new Button();
         open = new Button();
-        close = new Button();
         build = new Button();
         run = new Button();
         copy = new Button();
@@ -35,7 +33,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
     private void init(){
         add(save);
         add(open);
-        add(close);
         add(build);
         add(run);
         add(copy);
@@ -44,7 +41,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
 
         save.setLabel("Save");
         open.setLabel("Open");
-        close.setLabel("Close");
         build.setLabel("Build");
         run.setLabel("Run");
         copy.setLabel("Copy");
@@ -53,7 +49,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
 
         save.addActionListener(this);
         open.addActionListener(this);
-        close.addActionListener(this);
         build.addActionListener(this);
         run.addActionListener(this);
         copy.addActionListener(this);
@@ -86,8 +81,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
                     e1.printStackTrace();
                 }
             }
-        }else if(e.getSource() == close){
-            editor.onCloseFile();
         }else if(e.getSource() == build){
             editor.onBuildProject();
         }else if(e.getSource() == run){
