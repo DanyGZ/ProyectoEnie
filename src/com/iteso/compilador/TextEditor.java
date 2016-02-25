@@ -1,6 +1,7 @@
 package com.iteso.compilador;
 
 import javax.swing.*;
+import javax.swing.text.DefaultEditorKit;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.DataFlavor;
@@ -38,7 +39,7 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
         while(scanner.hasNext()){
             code += (scanner.nextLine() + "\n");
         }
-        textArea.setText(code);
+        textArea.append(code);
     }
 
     @Override
@@ -54,7 +55,12 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
 
     @Override
     public void onCutText() {
-        System.out.print("Cut");
+
+        ActionMap m = menuBar.getActionMap();
+        Action Cut = m.get(DefaultEditorKit.cutAction);
+        Action Copy = m.get(DefaultEditorKit.copyAction);
+        Action Paste = m.get(DefaultEditorKit.pasteAction);
+        
     }
 
     @Override
