@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.Scanner;
 
-public class EditTextMenuBar extends JMenuBar implements ActionListener{
+public class EditTextMenuBar extends JToolBar implements ActionListener{
     private Button save;
     private Button open;
     private Button close;
@@ -28,7 +28,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         paste = new Button();
         cut = new Button();
         this.editor = editor;
-
         init();
     }
 
@@ -41,15 +40,6 @@ public class EditTextMenuBar extends JMenuBar implements ActionListener{
         add(copy);
         add(paste);
         add(cut);
-
-        save.setLabel("Save");
-        open.setLabel("Open");
-        close.setLabel("Close");
-        build.setLabel("Build");
-        run.setLabel("Run");
-        copy.setLabel("Copy");
-        paste.setLabel("Paste");
-        cut.setLabel("cut");
 
         save.addActionListener(this);
         open.addActionListener(this);

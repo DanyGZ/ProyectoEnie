@@ -25,7 +25,7 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(textArea);
-        setJMenuBar(menuBar);
+        getContentPane().add(menuBar);
     }
 
     @Override
@@ -51,7 +51,6 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
     @Override
     public void onCutText() {
         textArea.cut();
-
     }
 
     @Override
