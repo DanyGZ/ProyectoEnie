@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d9dbd99-94cd-4c81-aaaf-f66969a69fdc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/build.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/copy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cut.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/open.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/paste.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/save.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/EditTextMenuBar.class" afterPath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/EditTextMenuBar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/Main.class" afterPath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/OnButtonPressedListener.class" afterPath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/OnButtonPressedListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/TextEditor.class" afterPath="$PROJECT_DIR$/out/production/ProyectoProcesadores/com/iteso/compilador/TextEditor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="7d9dbd99-94cd-4c81-aaaf-f66969a69fdc" name="Default" comment="" />
     <ignored path="ProyectoProcesadores.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,8 +43,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -87,8 +73,8 @@
       <file leaf-file-name="EditTextMenuBar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/iteso/compilador/EditTextMenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4949324">
-              <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.5067568">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -714,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -772,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/iteso/compilador/EditTextMenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4949324">
-          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.5067568">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
