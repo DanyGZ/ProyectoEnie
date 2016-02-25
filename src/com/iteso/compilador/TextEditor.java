@@ -60,7 +60,7 @@ public class TextEditor extends JFrame implements OnButtonPressedListener{
         Action Cut = m.get(DefaultEditorKit.cutAction);
         Action Copy = m.get(DefaultEditorKit.copyAction);
         Action Paste = m.get(DefaultEditorKit.pasteAction);
-        
+
     }
 
     @Override
