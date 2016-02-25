@@ -136,3 +136,6 @@ Icon
 .Spotlight-V100
 .Trashes
 /target/
+
+#no queremos
+out/*
